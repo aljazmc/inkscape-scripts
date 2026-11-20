@@ -58,7 +58,8 @@ def export(document, filepath, extension=None, **settings):
         os.remove(filepath)
 
     # Inkscape exits with 0 even when an export fails, so check the file
-    result = subprocess.run(args, input=document.encode(), capture_output=True)
+    result = subprocess.run(args, input=document.encode(), capture_output=True,
+                            check=False)
     if result.returncode != 0 or not os.path.isfile(filepath):
         sys.exit(f"inkscape export failed for {filepath}:\n"
                  + result.stderr.decode(errors="replace"))
