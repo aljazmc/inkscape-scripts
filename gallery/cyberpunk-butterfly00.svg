@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg32"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs">
+    <linearGradient
+       id="sky-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#05010f"
+         id="stop1" />
+      <stop
+         offset="1.0"
+         style="stop-color:#3b0a5c"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="sky-gradient"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="680"
+       xlink:href="#sky-gradient-stops" />
+    <linearGradient
+       id="ground-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#12002a"
+         id="stop3" />
+      <stop
+         offset="1.0"
+         style="stop-color:#020008"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="ground-gradient"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="680"
+       x2="0"
+       y2="1080"
+       xlink:href="#ground-gradient-stops" />
+    <clipPath
+       id="sun-clip">
+      <rect
+         x="0"
+         y="320"
+         width="1920"
+         height="116"
+         id="rect4" />
+      <rect
+         x="0"
+         y="458"
+         width="1920"
+         height="12"
+         id="rect5" />
+      <rect
+         x="0"
+         y="489"
+         width="1920"
+         height="15"
+         id="rect6" />
+      <rect
+         x="0"
+         y="520"
+         width="1920"
+         height="18"
+         id="rect7" />
+      <rect
+         x="0"
+         y="551"
+         width="1920"
+         height="21"
+         id="rect8" />
+      <rect
+         x="0"
+         y="582"
+         width="1920"
+         height="24"
+         id="rect9" />
+      <rect
+         x="0"
+         y="613"
+         width="1920"
+         height="27"
+         id="rect10" />
+      <rect
+         x="0"
+         y="644"
+         width="1920"
+         height="36"
+         id="rect11" />
+    </clipPath>
+    <filter
+       id="sun-glow"
+       x="-0.16"
+       y="-0.16"
+       width="1.32"
+       height="0.92">
+      <feGaussianBlur
+         stdDeviation="40"
+         result="blur"
+         id="feGaussianBlur11" />
+      <feMerge
+         id="feMerge12">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode11" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode12" />
+      </feMerge>
+    </filter>
+    <linearGradient
+       id="sun-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#ffd319"
+         id="stop12" />
+      <stop
+         offset="1.0"
+         style="stop-color:#ff2975"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       id="sun-gradient"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="80"
+       x2="0"
+       y2="680"
+       xlink:href="#sun-gradient-stops" />
+    <clipPath
+       id="grid-clip">
+      <rect
+         x="0"
+         y="680"
+         width="1920"
+         height="400"
+         id="rect13" />
+    </clipPath>
+    <filter
+       id="grid-glow"
+       x="-0.0019957127"
+       y="-0.03847918"
+       width="1.0039914"
+       height="1.0769584">
+      <feGaussianBlur
+         stdDeviation="6"
+         result="blur"
+         id="feGaussianBlur13" />
+      <feMerge
+         id="feMerge14">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode13" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode14" />
+      </feMerge>
+    </filter>
+    <filter
+       id="wings-glow"
+       x="-0.065356481"
+       y="-0.11146262"
+       width="1.130713"
+       height="1.2229161">
+      <feGaussianBlur
+         stdDeviation="25"
+         result="blur"
+         id="feGaussianBlur14" />
+      <feMerge
+         id="feMerge16">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode15" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode16" />
+      </feMerge>
+    </filter>
+    <clipPath
+       id="wings-clip">
+      <path
+         d="M 948,410 C 840,170 540,100 490,200 C 440,310 630,450 948,440 Z M 948,450 C 700,460 560,600 630,690 C 700,770 870,660 948,490 Z M 972,410 C 1080,170 1380,100 1430,200 C 1480,310 1290,450 972,440 Z M 972,450 C 1220,460 1360,600 1290,690 C 1220,770 1050,660 972,490 Z"
+         id="path16" />
+    </clipPath>
+    <linearGradient
+       id="wings-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#00f0ff"
+         id="stop16" />
+      <stop
+         offset="1.0"
+         style="stop-color:#7a00ff"
+         id="stop17" />
+    </linearGradient>
+    <radialGradient
+       id="wings-gradient"
+       gradientUnits="userSpaceOnUse"
+       cx="960"
+       cy="430"
+       r="480"
+       xlink:href="#wings-gradient-stops" />
+    <linearGradient
+       id="spot-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#ff2975"
+         id="stop18" />
+      <stop
+         offset="1.0"
+         style="stop-color:#ffd319"
+         id="stop19" />
+    </linearGradient>
+    <radialGradient
+       id="spot-gradient"
+       cx="0.5"
+       cy="0.5"
+       r="0.5"
+       xlink:href="#spot-gradient-stops" />
+    <filter
+       id="body-glow"
+       x="-0.11846154"
+       y="-0.073333333"
+       width="1.2369231"
+       height="1.1419048">
+      <feGaussianBlur
+         stdDeviation="12"
+         result="blur"
+         id="feGaussianBlur19" />
+      <feMerge
+         id="feMerge20">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode19" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode20" />
+      </feMerge>
+    </filter>
+    <linearGradient
+       id="body-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#ffffff"
+         id="stop20" />
+      <stop
+         offset="1.0"
+         style="stop-color:#ff2975"
+         id="stop21" />
+    </linearGradient>
+    <linearGradient
+       id="body-gradient"
+       gradientUnits="userSpaceOnUse"
+       x1="960"
+       y1="340"
+       x2="960"
+       y2="600"
+       xlink:href="#body-gradient-stops" />
+    <linearGradient
+       id="head-gradient-stops">
+      <stop
+         offset="0.0"
+         style="stop-color:#ffffff"
+         id="stop22" />
+      <stop
+         offset="1.0"
+         style="stop-color:#ff2975"
+         id="stop23" />
+    </linearGradient>
+    <radialGradient
+       id="head-gradient"
+       gradientUnits="userSpaceOnUse"
+       cx="960"
+       cy="320"
+       r="28"
+       xlink:href="#head-gradient-stops" />
+  </defs>
+  <g
+     id="sky"
+     opacity="1.0">
+    <rect
+       x="0"
+       y="0"
+       width="1920"
+       height="680"
+       fill="url(#sky-gradient)"
+       id="rect23" />
+    <rect
+       x="0"
+       y="680"
+       width="1920"
+       height="400"
+       fill="url(#ground-gradient)"
+       id="rect24" />
+  </g>
+  <g
+     id="sun"
+     opacity="1.0">
+    <g
+       filter="url(#sun-glow)"
+       id="g24">
+      <circle
+         cx="960"
+         cy="620"
+         r="300"
+         clip-path="url(#sun-clip)"
+         fill="url(#sun-gradient)"
+         id="circle24" />
+    </g>
+  </g>
+  <g
+     id="grid"
+     opacity="1.0">
+    <path
+       d="M 400,680 L -2680,1080 M 440,680 L -2420,1080 M 480,680 L -2160,1080 M 520,680 L -1900,1080 M 560,680 L -1640,1080 M 600,680 L -1380,1080 M 640,680 L -1120,1080 M 680,680 L -860,1080 M 720,680 L -600,1080 M 760,680 L -340,1080 M 800,680 L -80,1080 M 840,680 L 180,1080 M 880,680 L 440,1080 M 920,680 L 700,1080 M 960,680 L 960,1080 M 1000,680 L 1220,1080 M 1040,680 L 1480,1080 M 1080,680 L 1740,1080 M 1120,680 L 2000,1080 M 1160,680 L 2260,1080 M 1200,680 L 2520,1080 M 1240,680 L 2780,1080 M 1280,680 L 3040,1080 M 1320,680 L 3300,1080 M 1360,680 L 3560,1080 M 1400,680 L 3820,1080 M 1440,680 L 4080,1080 M 1480,680 L 4340,1080 M 1520,680 L 4600,1080 M 0,686 L 1920,686 M 0,688.7 L 1920,688.7 M 0,692.615 L 1920,692.615 M 0,698.292 L 1920,698.292 M 0,706.523 L 1920,706.523 M 0,718.458 L 1920,718.458 M 0,735.765 L 1920,735.765 M 0,760.859 L 1920,760.859 M 0,797.245 L 1920,797.245 M 0,850.006 L 1920,850.006 M 0,926.508 L 1920,926.508 M 0,1037.44 L 1920,1037.44"
+       fill="none"
+       stroke="#ff00ff"
+       stroke-width="2"
+       clip-path="url(#grid-clip)"
+       filter="url(#grid-glow)"
+       id="path24" />
+  </g>
+  <g
+     id="wings"
+     opacity="0.92">
+    <g
+       filter="url(#wings-glow)"
+       id="g31">
+      <path
+         d="M 948,410 C 840,170 540,100 490,200 C 440,310 630,450 948,440 Z M 948,450 C 700,460 560,600 630,690 C 700,770 870,660 948,490 Z M 972,410 C 1080,170 1380,100 1430,200 C 1480,310 1290,450 972,440 Z M 972,450 C 1220,460 1360,600 1290,690 C 1220,770 1050,660 972,490 Z"
+         fill="url(#wings-gradient)"
+         id="path25" />
+      <g
+         clip-path="url(#wings-clip)"
+         id="g30">
+        <circle
+           cx="630"
+           cy="240"
+           r="45.0"
+           fill="url(#spot-gradient)"
+           id="circle25" />
+        <circle
+           cx="1290"
+           cy="240"
+           r="45.0"
+           fill="url(#spot-gradient)"
+           id="circle26" />
+        <circle
+           cx="760"
+           cy="340"
+           r="30.0"
+           fill="url(#spot-gradient)"
+           id="circle27" />
+        <circle
+           cx="1160"
+           cy="340"
+           r="30.0"
+           fill="url(#spot-gradient)"
+           id="circle28" />
+        <circle
+           cx="710"
+           cy="600"
+           r="35.0"
+           fill="url(#spot-gradient)"
+           id="circle29" />
+        <circle
+           cx="1210"
+           cy="600"
+           r="35.0"
+           fill="url(#spot-gradient)"
+           id="circle30" />
+      </g>
+      <path
+         d="M 948,410 C 840,170 540,100 490,200 C 440,310 630,450 948,440 Z M 948,450 C 700,460 560,600 630,690 C 700,770 870,660 948,490 Z M 972,410 C 1080,170 1380,100 1430,200 C 1480,310 1290,450 972,440 Z M 972,450 C 1220,460 1360,600 1290,690 C 1220,770 1050,660 972,490 Z"
+         fill="none"
+         stroke="#e0ffff"
+         stroke-width="5"
+         stroke-linejoin="round"
+         id="path30" />
+      <path
+         d="M 948,410 C 948,410 490,200 490,200 M 948,450 C 948,450 630,690 630,690 M 972,410 C 972,410 1430,200 1430,200 M 972,450 C 972,450 1290,690 1290,690"
+         fill="none"
+         stroke="#e0ffff"
+         stroke-width="2"
+         id="path31" />
+    </g>
+  </g>
+  <g
+     id="body"
+     opacity="1.0">
+    <g
+       filter="url(#body-glow)"
+       id="g32">
+      <ellipse
+         cx="960"
+         cy="470"
+         rx="16"
+         ry="130"
+         fill="url(#body-gradient)"
+         id="ellipse31" />
+      <circle
+         cx="960"
+         cy="324"
+         r="24"
+         fill="url(#head-gradient)"
+         id="circle31" />
+      <path
+         d="M 952,305 C 930,230 870,180 830,180 M 968,305 C 990,230 1050,180 1090,180"
+         fill="none"
+         stroke="#ff2975"
+         stroke-width="4"
+         stroke-linecap="round"
+         id="path32" />
+    </g>
+  </g>
+</svg>
