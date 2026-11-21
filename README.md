@@ -3,7 +3,7 @@
 Python scripts that draw vector images as SVG, and a shell script that
 exports them with Inkscape to PNG, PDF, EPS, plain SVG, CAD, office and
 about twenty other formats. Each drawing is a self-contained project in
-`scripts/` with AI-generated code.
+`scripts/`.
 
 ## Requirements
 
