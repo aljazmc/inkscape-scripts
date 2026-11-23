@@ -1,5 +1,5 @@
 """Tests for scripts/common.py, with Inkscape replaced by a stand-in.
-Run: python3 -m unittest discover tests"""
+Run: python3 -m unittest discover tests/py"""
 import importlib
 import sys
 import tempfile
@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 common = importlib.import_module("common")
 
 

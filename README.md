@@ -146,23 +146,66 @@ are ready.
 ## Tests
 
 ```sh
-bash tests/test_project.sh             # project.sh
-python3 -m unittest discover tests     # the Python scripts
+for test in tests/sh/test_*.sh; do bash "$test"; done   # project.sh
+python3 -m unittest discover tests/py                   # the scripts and the drawings
 ```
 
-The tests need only bash and Python's standard library, and none of them
-runs the application or writes outputs.
+The tests are split by language: `tests/sh/` tests `project.sh` with bash,
+`tests/py/` tests the Python scripts and the drawings they build. None of
+them writes outputs into the repository.
 
-- `tests/test_project.sh` checks that `project.sh` rejects bad arguments
+The tests of `project.sh` run it in a temporary sandbox, with a few fake
+projects and stand-ins for `python3` and `inkscape` (see
+`tests/sh/lib.sh`), so they draw nothing and never touch `build/` or `svg/`:
+
+- `tests/sh/test_project.sh` checks that `project.sh` rejects bad arguments
   with its usage and exit code 1.
-- `tests/test_common.py` checks that `export()` turns its settings into
+- `tests/sh/test_formats.sh` checks that the formats of `project.sh`, the
+  exporters in `scripts/` and this README agree: every format has an
+  exporter that writes its own file, every exporter is listed, the Formats
+  table names every format, and the count of formats is right.
+- `tests/sh/test_outputs.sh` checks the names of the outputs, as described
+  under Usage, through the `clean` commands; the plain SVG of `gsvg` and the
+  Inkscape SVG of `svg` share a name in different folders.
+- `tests/sh/test_run.sh` checks that `project.sh` runs the right script
+  with the project in `PROJECT` and `scripts/` first on the `PYTHONPATH`,
+  for one project and for `all`, from any directory; that it skips existing
+  outputs, reports a failed export with exit code 1 and stops when
+  `inkscape` or `python3` is missing.
+
+The Python tests build every project as `project.sh` does, in a separate
+Python process. `tests/py/test_common.py` and `tests/py/test_document.py`
+need only Python; the others need Inkscape and Pillow and are skipped
+without them (see `tests/py/drawing.py`):
+
+- `tests/py/test_common.py` checks that `export()` turns its settings into
   Inkscape's `--export-*` options, with a stand-in for Inkscape.
+- `tests/py/test_document.py` reads the SVG document without Inkscape: it is
+  sized in pixels with a matching `viewBox`, its ids are unique, every
+  `url(#...)` and `href` reaches an element (a broken one silently drops a
+  gradient, filter or clip), everything is drawn in labelled Inkscape
+  layers, colors are valid, there are no `nan` or `inf` numbers, and every
+  build gives the same document.
+- `tests/py/test_render.py` renders the drawing with Inkscape at a quarter
+  of its size and checks the pixels: the right size, the page covered,
+  neither black nor washed out, with contrast; that hiding any layer
+  visibly changes the picture (a layer that doesn't is covered or off the
+  page); and that the drawing in `gallery/` still matches the project.
+- `tests/py/test_exports.py` runs every export script on a temporary copy
+  of `scripts/` and checks each file by what is inside it: images at
+  1920×1080, a PDF 1.5 header, the EPS and PostScript bounding box in
+  points, SVG that parses (plain SVG without editor data, Inkscape SVG with
+  its layers), one SVG per layer in the `tar`, the ODF manifest of the
+  `odg`, the EMF and WMF signatures, complete DXF and HPGL, PSTricks,
+  POV-Ray and canvas code, and a GIMP palette with every color of the
+  drawing. Every format needs a check of its own, so a new format can't go
+  untested. It takes about 20 seconds a project.
 
 Lint the code with [ShellCheck](https://www.shellcheck.net/) and
 [Ruff](https://docs.astral.sh/ruff/):
 
 ```sh
-shellcheck project.sh tests/*.sh
+shellcheck project.sh tests/sh/*.sh
 ruff check .
 ```
 
