@@ -166,7 +166,8 @@ class Checks:
 
     def check_tex(self, path, root):
         text = path.read_text()
-        self.t.assertIn(r"\begin{pspicture}(%d,%d)" % size(root), text)
+        width, height = size(root)
+        self.t.assertIn(rf"\begin{{pspicture}}({width},{height})", text)
         self.t.assertIn(r"\end{pspicture}", text)
 
     def check_pov(self, path, root):
@@ -176,7 +177,8 @@ class Checks:
 
     def check_html(self, path, root):
         text = path.read_text()
-        self.t.assertRegex(text, r"<canvas[^>]*width=.%d.[^>]*height=.%d." % size(root))
+        width, height = size(root)
+        self.t.assertRegex(text, rf"<canvas[^>]*width=.{width}.[^>]*height=.{height}.")
         self.t.assertIn("getContext", text, "the drawing code")
 
     def xml(self, path, tag):
@@ -231,7 +233,7 @@ class ExportTest(unittest.TestCase):
                         script = "savesvg.py" if format == "svg" else f"export{format}.py"
                         result = subprocess.run(
                             [sys.executable, f"scripts/{script}"], cwd=tmp,
-                            capture_output=True, text=True, timeout=300,
+                            capture_output=True, text=True, timeout=300, check=False,
                             env={**os.environ, "PROJECT": project, "PYTHONPATH": "scripts",
                                  "PYTHONDONTWRITEBYTECODE": "1"})
                         self.assertEqual(result.returncode, 0, result.stderr[-2000:])

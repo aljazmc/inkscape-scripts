@@ -42,7 +42,7 @@ def build(project):
     """The project's SVG document, as a string, built afresh."""
     result = subprocess.run(
         [sys.executable, "-c", BUILD, str(SCRIPTS)],
-        capture_output=True, text=True, cwd=ROOT,
+        capture_output=True, text=True, cwd=ROOT, check=False,
         env={**os.environ, "PROJECT": project, "PYTHONDONTWRITEBYTECODE": "1"},
     )
     if result.returncode != 0:

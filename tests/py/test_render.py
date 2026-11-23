@@ -61,8 +61,7 @@ class RenderTest(unittest.TestCase):
 
     def each(self):
         self.assertTrue(self.renders, "no projects")
-        for project, image in self.renders.items():
-            yield project, image
+        yield from self.renders.items()
 
     def test_size(self):
         for project, image in self.each():
