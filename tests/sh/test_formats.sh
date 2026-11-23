@@ -43,7 +43,7 @@ done
 
 check "scripts/savesvg.py saves Inkscape SVG into svg/" \
     grep -qF 'load_project("svg")' scripts/savesvg.py
-check "the README lists svg" grep -qE '^\|.*`svg`' README.md
+check "the README lists svg" grep -qE "^\|.*\`svg\`" README.md
 
 # every format and the Inkscape SVG
 outputs=$(( ${#known[@]} + 1 ))
