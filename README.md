@@ -1,6 +1,6 @@
 # inkscape-scripts
 
-[![lint](https://github.com/aljazmc/inkscape-scripts/actions/workflows/lint.yml/badge.svg)](https://github.com/aljazmc/inkscape-scripts/actions/workflows/lint.yml)
+[![CI](https://github.com/aljazmc/inkscape-scripts/actions/workflows/ci.yml/badge.svg)](https://github.com/aljazmc/inkscape-scripts/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Inkscape 1.x](https://img.shields.io/badge/Inkscape-1.x-000000?logo=inkscape&logoColor=white)](https://inkscape.org/)
 [![Python 3](https://img.shields.io/badge/Python-3-3776ab?logo=python&logoColor=white)](https://www.python.org/)
